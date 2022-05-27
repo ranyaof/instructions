@@ -22,6 +22,15 @@ pipeline {
       bat "dotnet build Ftth.Api/Ftth.Api.csproj  --configuration Release"
      }
   }
-
+ stage('build packages'){
+   steps{
+      bat "dotnet build Ftth.Api/Ftth.Api.csproj  --configuration Release"
+     }
+  }
+  stage('Publish'){
+     steps{
+       bat "dotnet publish Ftth.Api/Ftth.Api.csproj "
+     }
+}
   }
 }
