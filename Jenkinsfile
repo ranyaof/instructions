@@ -6,6 +6,7 @@ pipeline {
     steps {
      git credentialsId: 'rany_github', url: 'https://github.com/ranyaof/oOrders.git', branch: 'master'
      }
+  }
      stage('Restore packages'){
    steps{
       bat "dotnet restore Ftth.Api/Ftth.Api.csproj"
