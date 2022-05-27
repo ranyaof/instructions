@@ -25,7 +25,8 @@ pipeline {
 
   stage('Publish'){
      steps{
-       bat "dotnet publish Ftth.Api/Ftth.Api.csproj "
+       bat "dotnet publish Ftth.Api/Ftth.Api.csproj  -c Release"
+   
      }
 }
   }
