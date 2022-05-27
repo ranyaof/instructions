@@ -3,7 +3,7 @@ pipeline {
   stages {
    stage ('Git Checkout') {
   steps {
-      git branch: 'master', credentialsId: 'ranyaof', url: 'https://github.com/ranyaof/oOrders.git'
+      git clone: 'master', credentialsId: 'rany_github', url: 'https://github.com/ranyaof/oOrders.git'
     }
   }
 
